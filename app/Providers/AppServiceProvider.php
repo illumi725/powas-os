@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\ServiceProvider;
 use Livewire\Component;
+use Illuminate\Support\Facades\URL;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -58,5 +59,9 @@ class AppServiceProvider extends ServiceProvider
 
             return $accessToken;
         });
+
+        if (env('APP_ENV')=='production') {
+            URL::forceScheme('https');
+        }
     }
 }
