@@ -6,7 +6,7 @@ use App\Http\Controllers\API\MembersController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\POWASController;
-use App\Http\Controllers\API\ReadingsController;
+use App\Http\Controllers\API\ReadingsController as APIReadingsController;
 use App\Http\Controllers\API\RegisterController;
 
 /*
@@ -27,7 +27,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::middleware('auth:sanctum')->group(function () {
     Route::resource('powas', POWASController::class);
     Route::resource('members', MembersController::class);
-    Route::resource('readings', ReadingsController::class);
+    Route::resource('readings', APIReadingsController::class);
     Route::resource('billings', BillingsController::class);
 });
 
