@@ -52,6 +52,7 @@ class RegisterController extends BaseController
             $user = Auth::user();
             $success['token'] = $user->createToken('powas-os-api')->plainTextToken;
             $success['name'] = $user->username;
+            $success['userData'] = $user;
 
             return $this->sendResponse($success, 'User successfully logged in!');
         } else {
