@@ -29,7 +29,8 @@ class Admin extends Component
 
     public function mount()
     {
-        $this->barlist = storage_path('app/bar_list.json');
+        // $this->barlist = storage_path('app/bar_list.json');
+        $this->barlist = '/storage/app/bar_list.json';
 
         $this->resetErrorBag('powas');
 

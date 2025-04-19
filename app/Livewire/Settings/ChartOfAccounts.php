@@ -285,7 +285,8 @@ class ChartOfAccounts extends Component
 
     public function populateFromJSONFile()
     {
-        $jsonFile = storage_path('app/chart_of_accounts.json');
+        // $jsonFile = storage_path('app/chart_of_accounts.json');
+        $jsonFile = '/storage/app/chart_of_accounts.json';
         $imported = 0;
 
         // $user_id = Auth::user()->user_id;

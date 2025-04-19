@@ -183,7 +183,8 @@ class AddMemberManually extends Component
         $this->thisPOWAS = $selectedPOWAS;
         $this->payment = 2700;
 
-        $barlist = storage_path('app/bar_list.json');
+        // $barlist = storage_path('app/bar_list.json');
+        $barlist = '/storage/app/bar_list.json';
         $this->membershipDate = Carbon::now()->format('Y-m-d');
 
         $this->isExistsEquityCapitalAccount = ChartOfAccounts::where('account_type', 'EQUITY')->where('account_name', 'LIKE', '%' . 'CAPITAL' . '%')->count();
@@ -222,7 +223,8 @@ class AddMemberManually extends Component
 
     public function loadBirthplace()
     {
-        $barlist = storage_path('app/bar_list.json');
+        // $barlist = storage_path('app/bar_list.json');
+        $barlist = '/storage/app/bar_list.json';
 
         if (file_exists($barlist)) {
             $jsonData = json_decode(file_get_contents($barlist), true);
@@ -250,7 +252,8 @@ class AddMemberManually extends Component
         $this->municipalityInput = '';
         $this->barangayInput = '';
 
-        $barlist = storage_path('app/bar_list.json');
+        // $barlist = storage_path('app/bar_list.json');
+        $barlist = '/storage/app/bar_list.json';
 
         if (file_exists($barlist)) {
             $jsonData = json_decode(file_get_contents($barlist), true);
@@ -281,7 +284,8 @@ class AddMemberManually extends Component
         $this->municipalityInput = '';
         $this->barangayInput = '';
 
-        $barlist = storage_path('app/bar_list.json');
+        // $barlist = storage_path('app/bar_list.json');
+        $barlist = '/storage/app/bar_list.json';
 
         if (file_exists($barlist)) {
             $jsonData = json_decode(file_get_contents($barlist), true);
@@ -315,7 +319,8 @@ class AddMemberManually extends Component
 
         $this->barangayInput = '';
 
-        $barlist = storage_path('app/bar_list.json');
+        // $barlist = storage_path('app/bar_list.json');
+        $barlist = '/storage/app/bar_list.json';
 
         if (file_exists($barlist)) {
             $jsonData = json_decode(file_get_contents($barlist), true);

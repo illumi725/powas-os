@@ -8,7 +8,8 @@ class BarlistController extends BaseController
 {
     public function index(): JsonResponse
     {
-        $filePath = storage_path('app/bar_list.json');
+        // $filePath = storage_path('app/bar_list.json');
+        $filePath = '/storage/app/bar_list.json';
 
         if (!file_exists($filePath)) {
             return $this->sendError('Not Found', ['error' => 'Barlist file not found!']);
