@@ -6,10 +6,11 @@ use App\Http\Traits\ChartOfAccountsTraits;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class ChartOfAccounts extends Model
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
     use ChartOfAccountsTraits;
 
     protected $primaryKey = 'account_number';
@@ -26,6 +27,6 @@ class ChartOfAccounts extends Model
 
     public function transanctions(): HasMany
     {
-        return $this->hasMany(Transanctions::class, 'account_number', 'account_number');
+        return $this->hasMany(Transactions::class, 'account_number', 'account_number');
     }
 }

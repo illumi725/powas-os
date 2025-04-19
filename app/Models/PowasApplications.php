@@ -6,10 +6,11 @@ use App\Http\Traits\POWASApplicationTraits;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class PowasApplications extends Model
 {
-    use HasFactory, POWASApplicationTraits;
+    use HasFactory, POWASApplicationTraits, SoftDeletes;
 
     protected $primaryKey = 'application_id';
     public $incrementing = false;

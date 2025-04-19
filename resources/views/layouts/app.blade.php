@@ -50,7 +50,7 @@
         </main>
     </div>
 
-    @livewire('chatbot.poca')
+    {{-- @livewire('chatbot.poca') --}}
 
     @stack('modals')
 

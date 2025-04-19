@@ -59,7 +59,7 @@
             </div>
         </div>
     </div>
-    @livewire('chatbot.poca')
+    {{-- @livewire('chatbot.poca') --}}
     @livewireScripts
 </body>
 

@@ -29,7 +29,7 @@ class PowasMembers extends Model
         return $this->hasOne(PowasApplications::class, 'application_id', 'application_id');
     }
 
-    public function transanctions(): HasMany
+    public function transactions(): HasMany
     {
         return $this->hasMany(Transactions::class, 'member_id', 'member_id');
     }
