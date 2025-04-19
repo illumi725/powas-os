@@ -24,6 +24,10 @@ class Readings extends Model
         'reading_count',
     ];
 
+    protected $casts = [
+        'reading_id' => 'string',
+    ];
+
     public function memberreading(): BelongsTo
     {
         return $this->belongsTo(PowasMembers::class, 'member_id', 'member_id');

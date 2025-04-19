@@ -41,6 +41,10 @@ class PowasApplications extends Model
         'reject_reason',
     ];
 
+    protected $casts = [
+        'application_id' => 'string',
+    ];
+
     public function powas(): BelongsTo
     {
         return $this->belongsTo(Powas::class, 'powas_id', 'powas_id');

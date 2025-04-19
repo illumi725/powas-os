@@ -28,6 +28,11 @@ class DamayanDisbursements extends Model
         'recorded_by',
     ];
 
+    protected $casts = [
+        'disbursement_id' => 'string',
+        'beneficiary_id' => 'string',
+    ];
+
     public function memberdamayandisbursement(): BelongsTo
     {
         return $this->belongsTo(PowasMembers::class, 'member_id', 'member_id');

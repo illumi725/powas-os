@@ -24,6 +24,10 @@ class BillsPayments extends Model
         'date_paid',
     ];
 
+    protected $casts = [
+        'payment_id' => 'string',
+    ];
+
     public function userbillspayments(): BelongsTo
     {
         return $this->belongsTo(User::class, 'recorded_by', 'user_id');

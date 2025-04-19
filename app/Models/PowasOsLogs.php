@@ -23,6 +23,10 @@ class PowasOsLogs extends Model
         'log_blade',
     ];
 
+    protected $casts = [
+        'log_id' => 'string',
+    ];
+
     public function actionlog(): BelongsTo
     {
         return $this->belongsTo(User::class, 'user_id', 'user_id');

@@ -17,12 +17,19 @@ class IssuedReceipts extends Model
     protected $fillable = [
         'print_id',
         'receipt_number',
-        'trxn_id',
+        '',
         'powas_id',
         'is_printed',
         'print_count',
         'transaction_date',
     ];
+
+    protected $casts = [
+        'print_id' => 'string',
+        'receipt_number' => 'string',
+        'trxn_id' => 'string',
+    ];
+
 
     public function printaction(): BelongsTo
     {

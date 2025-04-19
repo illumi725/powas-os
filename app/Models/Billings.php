@@ -37,6 +37,12 @@ class Billings extends Model
         'bill_status',
     ];
 
+    protected $casts = [
+        'billing_id' => 'string',
+        'previous_reading_id' => 'string',
+        'present_reading_id' => 'string',
+    ];
+
     public function userbilling(): BelongsTo
     {
         return $this->belongsTo(User::class, 'recorded_by', 'user_id');

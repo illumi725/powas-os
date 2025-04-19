@@ -23,6 +23,11 @@ class ReconnectionFees extends Model
         'date_recorded',
     ];
 
+    protected $casts = [
+        'reconnection_id' => 'string',
+        'billing_id' => 'string',
+    ];
+
     public function userreconnectionfee(): BelongsTo
     {
         return $this->belongsTo(User::class, 'recorded_by', 'user_id');

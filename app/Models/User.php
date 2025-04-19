@@ -65,6 +65,7 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'contact_number' => 'datetime',
     ];
 
     /**

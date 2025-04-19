@@ -22,6 +22,11 @@ class DamayanCollections extends Model
         'recorded_by',
     ];
 
+    protected $casts = [
+        'collection_id' => 'string',
+        'disbursement_id' => 'string',
+    ];
+
     public function colpowas(): BelongsTo
     {
         return $this->belongsTo(Powas::class, 'powas_id', 'powas_id');

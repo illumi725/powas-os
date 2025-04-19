@@ -28,6 +28,10 @@ class DamayanBeneficiaries extends Model
         'recipient',
     ];
 
+    protected $casts = [
+        'beneficiary_id' => 'string',
+    ];
+
     public function powasdamayanbeneficiaries(): BelongsTo
     {
         return $this->belongsTo(Vouchers::class, 'powas_id', 'powas_id');

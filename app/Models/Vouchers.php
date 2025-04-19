@@ -29,6 +29,11 @@ class Vouchers extends Model
         'voucher_date',
     ];
 
+    protected $casts = [
+        'voucher_id' => 'string',
+        'trxn_id' => 'string',
+    ];
+
     public function uservoucher(): BelongsTo
     {
         return $this->belongsTo(User::class, 'recorded_by', 'user_id');

@@ -25,6 +25,11 @@ class MicroSavings extends Model
         'date_recorded',
     ];
 
+    protected $casts = [
+        'savings_id' => 'string',
+        'billing_id' => 'string',
+    ];
+
     public function usermicrosavings(): BelongsTo
     {
         return $this->belongsTo(User::class, 'recorded_by', 'user_id');

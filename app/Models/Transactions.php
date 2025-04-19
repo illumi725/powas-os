@@ -31,6 +31,11 @@ class Transactions extends Model
         'transaction_date',
     ];
 
+    protected $casts = [
+        'trxn_id' => 'string',
+        '' => 'string',
+    ];
+
     public function chartofaccounts(): BelongsTo
     {
         return $this->belongsTo(ChartOfAccounts::class, 'account_number', 'account_number');

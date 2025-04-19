@@ -24,6 +24,10 @@ class PowasMembers extends Model
         'member_status',
     ];
 
+    protected $casts = [
+        'application_id' => 'string',
+    ];
+
     public function applicationinfo(): HasOne
     {
         return $this->hasOne(PowasApplications::class, 'application_id', 'application_id');

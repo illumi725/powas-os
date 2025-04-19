@@ -17,6 +17,10 @@ class VouchersParticulars extends Model
         'description',
     ];
 
+    protected $casts = [
+        'voucher_id' => 'string',
+    ];
+
     public function voucher(): BelongsTo
     {
         return $this->belongsTo(Vouchers::class, 'voucher_id', 'voucher_id');

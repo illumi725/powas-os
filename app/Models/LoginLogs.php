@@ -20,6 +20,10 @@ class LoginLogs extends Model
         'user_id',
     ];
 
+    protected $casts = [
+        'login_id' => 'string',
+    ];
+
     public function loginlogs(): BelongsTo
     {
         return $this->belongsTo(User::class, 'user_id', 'user_id');

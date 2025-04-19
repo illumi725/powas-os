@@ -17,6 +17,10 @@ class BankSlipPictures extends Model
         'bank_slip_image',
     ];
 
+    protected $casts = [
+        'trxn_id' => 'string',
+    ];
+
     public function bankslip(): BelongsTo
     {
         return $this->belongsTo(Transactions::class, 'trxn_id', 'trxn_id');
