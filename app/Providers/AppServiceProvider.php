@@ -60,8 +60,8 @@ class AppServiceProvider extends ServiceProvider
             return $accessToken;
         });
 
-        // if (env('APP_ENV')=='production') {
-        //     URL::forceScheme('https');
-        // }
+        if (env('APP_ENV')=='production') {
+            URL::forceScheme('https');
+        }
     }
 }
