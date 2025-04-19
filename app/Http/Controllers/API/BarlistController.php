@@ -9,8 +9,9 @@ class BarlistController extends BaseController
     public function index(): JsonResponse
     {
         // dd(storage_path('app/bar_list.json'));
-        $filePath = 'https://powas-os-ac6abf9a38ec.herokuapp.com/app/bar_list.json';
-        $filePath = '';
+        $filePath = storage_path('app/bar_list.json');
+        // $filePath = '';
+        dd($filePath);
 
         if (!file_exists($filePath)) {
             return $this->sendError('Not Found', ['error' => 'Barlist file not found!']);
