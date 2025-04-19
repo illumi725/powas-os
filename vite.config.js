@@ -13,7 +13,7 @@ export default defineConfig({
                 'app/Livewire/**',
             ],
             build: {
-                buildDirectory: '../../build',
+                buildDirectory: '/public/build',
             },
         }),
     ],
