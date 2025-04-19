@@ -1,0 +1,282 @@
+{
+    "101": {
+        "account_name": "CASH ON HAND",
+        "alias": "CASH ON HAND",
+        "account_type": "ASSET",
+        "normal_balance": "DEBIT",
+        "description": "Represents the amount of physical currency (cash) that the organization has on hand."
+    },
+    "102": {
+        "account_name": "CASH IN BANK",
+        "alias": "CASH IN BANK",
+        "account_type": "ASSET",
+        "normal_balance": "DEBIT",
+        "description": "Represents the amount of money the organization has in its bank accounts."
+    },
+    "103": {
+        "account_name": "PROPERTIES AND EQUIPMENT",
+        "alias": "PROPERTIES AND EQUIPMENT",
+        "account_type": "ASSET",
+        "normal_balance": "DEBIT",
+        "description": "For recording the value of physical assets like land, buildings, and equipment that the organization owns for its operations."
+    },
+    "104": {
+        "account_name": "LESS:ACCUMULATED DEPRECIATION",
+        "alias": "LESS:ACCUMULATED DEPRECIATION",
+        "account_type": "ASSET",
+        "normal_balance": "CREDIT",
+        "description": "Represents the accumulated depreciation on properties and equipment."
+    },
+    "105": {
+        "account_name": "BILLS RECEIVABLES",
+        "alias": "BILLING AMOUNT",
+        "account_type": "ASSET",
+        "normal_balance": "DEBIT",
+        "description": "For recording amounts owed to the organization by others in the form of promissory notes or bills."
+    },
+    "106": {
+        "account_name": "OTHER RECEIVABLES",
+        "alias": "OTHER RECEIVABLES",
+        "account_type": "ASSET",
+        "normal_balance": "DEBIT",
+        "description": "For recording amounts owed to the organization by others that don't fall into the category of bills receivables."
+    },
+    "107": {
+        "account_name": "LESS: ALLOWANCE FOR PROBABLE LOSSES",
+        "alias": "LESS: ALLOWANCE FOR PROBABLE LOSSES",
+        "account_type": "ASSET",
+        "normal_balance": "CREDIT",
+        "description": "A contra-asset account representing the estimated amount that may not be collected from accounts receivable due to probable losses."
+    },
+    "201": {
+        "account_name": "MEMBER'S MICRO-SAVINGS",
+        "alias": "MONTHLY DUE",
+        "account_type": "LIABILITY",
+        "normal_balance": "CREDIT",
+        "description": "Represents the liability the organization owes to its members for their micro-savings. Damayan contributions are recorded here as well."
+    },
+    "202": {
+        "account_name": "ACCOUNTS PAYABLE",
+        "alias": "ACCOUNTS PAYABLE",
+        "account_type": "LIABILITY",
+        "normal_balance": "CREDIT",
+        "description": "Represents the amounts the organization owes to its creditors."
+    },
+    "203": {
+        "account_name": "NOTES PAYABLE",
+        "alias": "NOTES PAYABLE",
+        "account_type": "LIABILITY",
+        "normal_balance": "CREDIT",
+        "description": "For recording amounts the organization owes in the form of written promissory notes."
+    },
+    "204": {
+        "account_name": "UTILITIES PAYABLE",
+        "alias": "UTILITIES PAYABLE",
+        "account_type": "LIABILITY",
+        "normal_balance": "CREDIT",
+        "description": "For recording amounts the organization owes for utility services."
+    },
+    "205": {
+        "account_name": "TAX PAYABLE",
+        "alias": "TAX PAYABLE",
+        "account_type": "LIABILITY",
+        "normal_balance": "CREDIT",
+        "description": "Represents taxes that the organization owes but has not yet paid."
+    },
+    "206": {
+        "account_name": "MEMBER'S ADVANCED PAYMENT",
+        "alias": "MEMBER'S ADVANCED PAYMENT",
+        "account_type": "LIABILITY",
+        "normal_balance": "CREDIT",
+        "description": "Represents payments made by members in advance."
+    },
+    "207": {
+        "account_name": "DAMAYAN COLLECTION AND DISBURSEMENT",
+        "alias": "DEATH BENEFITS ASSISTANCE",
+        "account_type": "LIABILITY",
+        "normal_balance": "DEBIT",
+        "description": "Represents collections and payments made for the death benefits assistance disbursement of members."
+    },
+    "208": {
+        "account_name": "EXCESS PAYMENTS",
+        "alias": "EXCESS PAYMENTS",
+        "account_type": "LIABILITY",
+        "normal_balance": "CREDIT",
+        "description": "Represents excess payments made by members which should be debited on the next billing."
+    },
+    "301": {
+        "account_name": "MEMBER'S CAPITAL",
+        "alias": "FIRST 50 PAYMENT",
+        "account_type": "EQUITY",
+        "normal_balance": "CREDIT",
+        "description": "Represents the contributions of the organization's members to its capital parti."
+    },
+    "302": {
+        "account_name": "NET INCOME",
+        "alias": "NET INCOME",
+        "account_type": "EQUITY",
+        "normal_balance": "CREDIT",
+        "description": "Represents the organization's cumulative net income."
+    },
+    "303": {
+        "account_name": "DUE TO EQUITY - OTHER PAYMENTS",
+        "alias": "DUE TO EQUITY - OTHER PAYMENTS",
+        "account_type": "EQUITY",
+        "normal_balance": "DEBIT",
+        "description": "Represents amounts the organization owes to its members for various payments."
+    },
+    "304": {
+        "account_name": "DUE TO EQUITY - FUND TRANSFER (TO/FROM OTHER POWAS)",
+        "alias": "DUE TO EQUITY - FUND TRANSFER (TO/FROM OTHER POWAS)",
+        "account_type": "EQUITY",
+        "normal_balance": "CREDIT",
+        "description": "Represents amounts the organization owes or is owed in the context of fund transfers with other organizations."
+    },
+    "305": {
+        "account_name": "MEMBER'S REFUND",
+        "alias": "MEMBER'S REFUND",
+        "account_type": "EQUITY",
+        "normal_balance": "DEBIT",
+        "description": "Represents refunds owed to the organization's members."
+    },
+    "401": {
+        "account_name": "GROSS REVENUE FROM RECEIVABLES",
+        "alias": "GROSS REVENUE FROM RECEIVABLES",
+        "account_type": "REVENUE",
+        "normal_balance": "CREDIT",
+        "description": "Represents the total revenue earned from receivables."
+    },
+    "402": {
+        "account_name": "APPLICATION FEE",
+        "alias": "APPLICATION FEE",
+        "account_type": "REVENUE",
+        "normal_balance": "CREDIT",
+        "description": "Represents revenue from fees charged for application processes."
+    },
+    "403": {
+        "account_name": "MEMBERSHIP FEE",
+        "alias": "MEMBERSHIP FEE",
+        "account_type": "REVENUE",
+        "normal_balance": "CREDIT",
+        "description": "Represents revenue from membership fees."
+    },
+    "404": {
+        "account_name": "RECONNECTION FEE",
+        "alias": "RECONNECTION FEE",
+        "account_type": "REVENUE",
+        "normal_balance": "CREDIT",
+        "description": "Represents revenue from fees charged for reconnection of services."
+    },
+    "405": {
+        "account_name": "PENALTIES",
+        "alias": "PENALTIES",
+        "account_type": "REVENUE",
+        "normal_balance": "CREDIT",
+        "description": "Represents revenue from penalties imposed."
+    },
+    "406": {
+        "account_name": "MISCELLANEOUS INCOME/OTHER RECEIPT",
+        "alias": "MISCELLANEOUS INCOME/OTHER RECEIPT",
+        "account_type": "REVENUE",
+        "normal_balance": "CREDIT",
+        "description": "Represents revenue from miscellaneous sources."
+    },
+    "407": {
+        "account_name": "LESS: REBATES AND DISCOUNTS",
+        "alias": "LESS: REBATES AND DISCOUNTS",
+        "account_type": "REVENUE",
+        "normal_balance": "DEBIT",
+        "description": "A contra-revenue account representing the amount of rebates and discounts given."
+    },
+    "408": {
+        "account_name": "PAST DUE COLLECTION",
+        "alias": "PAST DUE COLLECTION",
+        "account_type": "REVENUE",
+        "normal_balance": "CREDIT",
+        "description": "Represents revenue from collecting past-due amounts."
+    },
+    "501": {
+        "account_name": "SUPPLIES AND MATERIALS",
+        "alias": "SUPPLIES AND MATERIALS",
+        "account_type": "EXPENSE",
+        "normal_balance": "DEBIT",
+        "description": "Represents expenses related to supplies and materials purchased. Includes PVC pipes, water meters, couplings, connectors, adapters, etc."
+    },
+    "502": {
+        "account_name": "METER INSTALLER ALLOWANCES",
+        "alias": "METER INSTALLER ALLOWANCES",
+        "account_type": "EXPENSE",
+        "normal_balance": "DEBIT",
+        "description": "Represents allowances paid to meter installers."
+    },
+    "503": {
+        "account_name": "COLLECTOR/METER READER/TANK CLEANER ALLOWANCES",
+        "alias": "COLLECTOR/METER READER/TANK CLEANER ALLOWANCES",
+        "account_type": "EXPENSE",
+        "normal_balance": "DEBIT",
+        "description": "Represents allowances paid to collectors, meter readers, and tank cleaners."
+    },
+    "504": {
+        "account_name": "TAXES AND LICENSES",
+        "alias": "TAXES AND LICENSES",
+        "account_type": "EXPENSE",
+        "normal_balance": "DEBIT",
+        "description": "Represents expenses related to taxes and licenses."
+    },
+    "505": {
+        "account_name": "OFFICE SUPPLIES AND PRINTS",
+        "alias": "OFFICE SUPPLIES AND PRINTS",
+        "account_type": "EXPENSE",
+        "normal_balance": "DEBIT",
+        "description": "Represents expenses related to office supplies and printing."
+    },
+    "506": {
+        "account_name": "UTILITIES EXPENSE",
+        "alias": "UTILITIES EXPENSE",
+        "account_type": "EXPENSE",
+        "normal_balance": "DEBIT",
+        "description": "Represents expenses related to utility services."
+    },
+    "507": {
+        "account_name": "OFFICERS' HONORARIA",
+        "alias": "OFFICERS' HONORARIA",
+        "account_type": "EXPENSE",
+        "normal_balance": "DEBIT",
+        "description": "Represents expenses related to honoraria for officers."
+    },
+    "508": {
+        "account_name": "REPAIRING AND MAINTENANCE",
+        "alias": "REPAIRING AND MAINTENANCE",
+        "account_type": "EXPENSE",
+        "normal_balance": "DEBIT",
+        "description": "Represents expenses related to repairing and maintaining assets."
+    },
+    "509": {
+        "account_name": "DONATIONS AND CASH GIFTS",
+        "alias": "DONATIONS AND CASH GIFTS",
+        "account_type": "EXPENSE",
+        "normal_balance": "DEBIT",
+        "description": "Represents expenses related to donations and cash gifts."
+    },
+    "510": {
+        "account_name": "MISCELLANEOUS EXPENSE",
+        "alias": "MISCELLANEOUS EXPENSE",
+        "account_type": "EXPENSE",
+        "normal_balance": "DEBIT",
+        "description": "Represents other miscellaneous operating expenses."
+    },
+    "511": {
+        "account_name": "TRANSPORTATION EXPENSE",
+        "alias": "TRANSPORTATION EXPENSE",
+        "account_type": "EXPENSE",
+        "normal_balance": "DEBIT",
+        "description": "Represents expenses related to transportation."
+    },
+    "512": {
+        "account_name": "DEPRECIATION EXPENSE",
+        "alias": "DEPRECIATION EXPENSE",
+        "account_type": "EXPENSE",
+        "normal_balance": "DEBIT",
+        "description": "Represents the allocation of the cost of tangible assets over their useful lives."
+    }
+}
