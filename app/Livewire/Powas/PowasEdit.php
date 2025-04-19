@@ -86,8 +86,8 @@ class PowasEdit extends Component
             $this->barangayInput = '';
         }
 
-        // $barlist = storage_path('app/bar_list.json');
-        $barlist = '/storage/app/bar_list.json';
+        $barlist = storage_path('app/bar_list.json');
+        // $barlist = '/storage/app/bar_list.json';
 
         if (file_exists($barlist)) {
             $jsonData = json_decode(file_get_contents($barlist), true);
@@ -122,8 +122,8 @@ class PowasEdit extends Component
             $this->barangayInput = '';
         }
 
-        // $barlist = storage_path('app/bar_list.json');
-        $barlist = '/storage/app/bar_list.json';
+        $barlist = storage_path('app/bar_list.json');
+        // $barlist = '/storage/app/bar_list.json';
 
         if (file_exists($barlist)) {
             $jsonData = json_decode(file_get_contents($barlist), true);
@@ -161,8 +161,8 @@ class PowasEdit extends Component
             $this->barangayInput = '';
         }
 
-        // $barlist = storage_path('app/bar_list.json');
-        $barlist = '/storage/app/bar_list.json';
+        $barlist = storage_path('app/bar_list.json');
+        // $barlist = '/storage/app/bar_list.json';
 
         if (file_exists($barlist)) {
             $jsonData = json_decode(file_get_contents($barlist), true);
@@ -306,8 +306,8 @@ class PowasEdit extends Component
         $this->oldValues['inauguration_date'] = $this->inaugurationInput;
         $this->oldValues['status'] = $this->statusInput;
 
-        // $barlist = storage_path('app/bar_list.json');
-        $barlist = '/storage/app/bar_list.json';
+        $barlist = storage_path('app/bar_list.json');
+        // $barlist = '/storage/app/bar_list.json';
 
         if (file_exists($barlist)) {
             $jsonData = json_decode(file_get_contents($barlist), true);

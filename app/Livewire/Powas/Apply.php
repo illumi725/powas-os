@@ -131,8 +131,8 @@ class Apply extends Component
 
     public function loadBirthplace()
     {
-        // $barlist = storage_path('app/bar_list.json');
-        $barlist = '/storage/app/bar_list.json';
+        $barlist = storage_path('app/bar_list.json');
+        // $barlist = '/storage/app/bar_list.json';
 
         if (file_exists($barlist)) {
             $jsonData = json_decode(file_get_contents($barlist), true);
@@ -156,8 +156,8 @@ class Apply extends Component
     {
         // $this->saveIDCard();
 
-        // $barlist = storage_path('app/bar_list.json');
-        $barlist = '/storage/app/bar_list.json';
+        $barlist = storage_path('app/bar_list.json');
+        // $barlist = '/storage/app/bar_list.json';
 
         if (file_exists($barlist)) {
             $jsonData = json_decode(file_get_contents($barlist), true);
@@ -186,8 +186,8 @@ class Apply extends Component
         $this->municipalityInput = '';
         $this->barangayInput = '';
 
-        // $barlist = storage_path('app/bar_list.json');
-        $barlist = '/storage/app/bar_list.json';
+        $barlist = storage_path('app/bar_list.json');
+        // $barlist = '/storage/app/bar_list.json';
 
         if (file_exists($barlist)) {
             $jsonData = json_decode(file_get_contents($barlist), true);
@@ -218,8 +218,8 @@ class Apply extends Component
         $this->municipalityInput = '';
         $this->barangayInput = '';
 
-        // $barlist = storage_path('app/bar_list.json');
-        $barlist = '/storage/app/bar_list.json';
+        $barlist = storage_path('app/bar_list.json');
+        // $barlist = '/storage/app/bar_list.json';
 
         if (file_exists($barlist)) {
             $jsonData = json_decode(file_get_contents($barlist), true);
@@ -253,8 +253,8 @@ class Apply extends Component
 
         $this->barangayInput = '';
 
-        // $barlist = storage_path('app/bar_list.json');
-        $barlist = '/storage/app/bar_list.json';
+        $barlist = storage_path('app/bar_list.json');
+        // $barlist = '/storage/app/bar_list.json';
 
         if (file_exists($barlist)) {
             $jsonData = json_decode(file_get_contents($barlist), true);

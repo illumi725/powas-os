@@ -80,8 +80,8 @@ class PowasCardsList extends Component
 
     public function mount()
     {
-        // $barlist = storage_path('app/bar_list.json');
-        $barlist = '/storage/app/bar_list.json';
+        $barlist = storage_path('app/bar_list.json');
+        // $barlist = '/storage/app/bar_list.json';
 
         if (file_exists($barlist)) {
             $jsonData = json_decode(file_get_contents($barlist), true);
@@ -113,8 +113,8 @@ class PowasCardsList extends Component
             $this->barangayInput = '';
         }
 
-        // $barlist = storage_path('app/bar_list.json');
-        $barlist = '/storage/app/bar_list.json';
+        $barlist = storage_path('app/bar_list.json');
+        // $barlist = '/storage/app/bar_list.json';
 
         if (file_exists($barlist)) {
             $jsonData = json_decode(file_get_contents($barlist), true);
@@ -149,8 +149,8 @@ class PowasCardsList extends Component
             $this->barangayInput = '';
         }
 
-        // $barlist = storage_path('app/bar_list.json');
-        $barlist = '/storage/app/bar_list.json';
+        $barlist = storage_path('app/bar_list.json');
+        // $barlist = '/storage/app/bar_list.json';
 
         if (file_exists($barlist)) {
             $jsonData = json_decode(file_get_contents($barlist), true);
@@ -188,8 +188,8 @@ class PowasCardsList extends Component
             $this->barangayInput = '';
         }
 
-        // $barlist = storage_path('app/bar_list.json');
-        $barlist = '/storage/app/bar_list.json';
+        $barlist = storage_path('app/bar_list.json');
+        // $barlist = '/storage/app/bar_list.json';
 
         if (file_exists($barlist)) {
             $jsonData = json_decode(file_get_contents($barlist), true);

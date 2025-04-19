@@ -101,8 +101,8 @@ class EditMember extends Component
 
     public function loadBarList()
     {
-        // $barlist = storage_path('app/bar_list.json');
-        $barlist = '/storage/app/bar_list.json';
+        $barlist = storage_path('app/bar_list.json');
+        // $barlist = '/storage/app/bar_list.json';
         $jsonData = '';
 
         if (file_exists($barlist)) {

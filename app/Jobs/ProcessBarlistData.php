@@ -26,8 +26,8 @@ class ProcessBarlistData implements ShouldQueue
      */
     public function handle(): void
     {
-        // $barlist = storage_path('app/bar_list.json');
-        $barlist = '/storage/app/bar_list.json';
+        $barlist = storage_path('app/bar_list.json');
+        // $barlist = '/storage/app/bar_list.json';
         $processedData = $this->processBarlist($barlist);
     }
 
