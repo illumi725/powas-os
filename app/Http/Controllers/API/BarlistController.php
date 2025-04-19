@@ -8,8 +8,8 @@ class BarlistController extends BaseController
 {
     public function index(): JsonResponse
     {
-        dd(storage_path('app/bar_list.json'));
-        $filePath = storage_path('app/bar_list.json');
+        // dd(storage_path('app/bar_list.json'));
+        $filePath = 'https://powas-os-ac6abf9a38ec.herokuapp.com/app/bar_list.json';
         $filePath = '';
 
         if (!file_exists($filePath)) {
