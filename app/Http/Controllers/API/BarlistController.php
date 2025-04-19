@@ -8,7 +8,7 @@ class BarlistController extends BaseController
 {
     public function index(): JsonResponse
     {
-        dd(app());
+        dd(storage_path());
         $filePath = storage_path('app/bar_list.json');
         $filePath = '';
 
