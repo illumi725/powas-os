@@ -8,6 +8,7 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends BaseController
@@ -50,13 +51,44 @@ class RegisterController extends BaseController
         if (Auth::attempt(['username' => $request->username, 'password' => $request->password])) {
             /** @var \App\Models\User $user */
             $user = Auth::user();
-            $success['token'] = $user->createToken('powas-os-api')->plainTextToken;
+            // $userData = User::with(['userinfo', 'roles.permissions'])->find($user->user_id);
+            $success['token'] = $user->createToken($request->device_name)->plainTextToken;
             $success['name'] = $user->username;
-            $success['userData'] = $user;
+            // $success['userData'] = $userData;
 
             return $this->sendResponse($success, 'User successfully logged in!');
         } else {
             return $this->sendError('Unauthorized', ['error' => 'Unauthorized']);
+        }
+    }
+
+    /**
+     * Logout API
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function logout(Request $request): JsonResponse
+    {
+        // $user = Auth::guard('sanctum')->user();
+
+        // Log::info($user);
+
+        // if (!$user) {
+        //     return $this->sendError('Unauthenticated', ['error' => 'Unauthenticated'], 401);
+        // }
+
+        // try {
+        //     $user->tokens()->delete();
+        // } catch (\Exception $e) {
+        //     return $this->sendError('Revocation Failed', ['error' => $e->getMessage()], 500);
+        // }
+
+        if (auth()->guard('sanctum')->check()) {
+            // Proceed with logout
+            auth()->guard('sanctum')->user()->tokens()->delete();
+            return $this->sendResponse([], 'User logged out successfully!');
+        } else {
+            return $this->sendError('Unauthenticated', ['error' => 'Unauthenticated'], 401);
         }
     }
 }

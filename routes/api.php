@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\POWASController;
 use App\Http\Controllers\API\ReadingsController as APIReadingsController;
 use App\Http\Controllers\API\RegisterController;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +22,17 @@ use App\Http\Controllers\API\RegisterController;
 */
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+    // dd($request->user()->user_id);
+
+    $result = User::with(['userinfo', 'roles.permissions'])->find($request->user()->user_id);
+
+    $response = [
+        'success' => true,
+        'data' => $result,
+        'message' => 'User with ID ' . $request->user()->user_id . ' retrieved',
+    ];
+
+    return response()->json($response, 200);
 });
 
 Route::middleware('auth:sanctum')->group(function () {
@@ -34,6 +45,17 @@ Route::middleware('auth:sanctum')->group(function () {
 Route::controller(RegisterController::class)->group(function () {
     Route::post('register', 'register');
     Route::post('login', 'login');
+    Route::post('logout', 'logout');
 });
+
+// Route::controller(RegisterController::class)->group(function () {
+//     Route::post('logout', 'logout');
+// })->middleware('auth:sanctum');
+
+Route::post('/logout', [RegisterController::class, 'logout'])->middleware('auth:sanctum');
+
+Route::get('/test-tokens', function () {
+    return auth()->user()->tokens; // Should return a collection
+})->middleware('auth:sanctum');
 
 Route::get('/bar-list', [BarlistController::class, 'index']);

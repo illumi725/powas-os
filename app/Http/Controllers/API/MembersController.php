@@ -18,6 +18,7 @@ class MembersController extends BaseController
     public function index(Request $request): JsonResponse
     {
         $powasID = $request->query('powas-id');
+        $perPage = $request->query('per-page', 10);
 
         $powas = Powas::find($powasID);
 
@@ -25,16 +26,12 @@ class MembersController extends BaseController
             return $this->sendError('Not Found', ['error' => 'POWAS not found!']);
         }
 
-        $membersQuery = PowasMembers::with(['applicationinfo']);
+        $membersQuery = PowasMembers::where('powas_applications.powas_id', $powasID)
+        ->join('powas_applications', 'powas_members.application_id', '=', 'powas_applications.application_id')
+        ->orderBy('powas_applications.lastname', 'asc');
 
-        if ($powasID !== null) {
-            $membersQuery->whereHas('applicationinfo', function($query) use ($powasID) {
-                $query->where('powas_id', $powasID);
-            });
-        }
+        $members = $membersQuery->paginate($perPage);
 
-        $members = $membersQuery->get();
-
-        return $this->sendResponse(MembersResource::collection($members), 'Members list retrieved successfully!');
+        return $this->sendResponse(["members" => MembersResource::collection($members), "totalMembers" => $members->total()], 'Members list retrieved successfully!');
     }
 }
